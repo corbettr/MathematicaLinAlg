@@ -1,0 +1,1434 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     51434,       1425]
+NotebookOptionsPosition[     49031,       1350]
+NotebookOutlinePosition[     49439,       1368]
+CellTagsIndexPosition[     49396,       1365]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 615: 9/23/15", "Title",
+ CellChangeTimes->{{3.651923602290498*^9, 3.651923609580978*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Input Types", "Section",
+ CellChangeTimes->{{3.651923620666786*^9, 3.651923626665984*^9}}],
+
+Cell[TextData[{
+ StyleBox["Text fields:  ",
+  FontWeight->"Bold"],
+ "You can enter text into a cell by declaring it to be a \
+\[OpenCurlyDoubleQuote]Text\[CloseCurlyDoubleQuote] cell.  This will prevent \
+it from being evaluated, and hence it will not produce any unwanted error \
+messages.  Click \[OpenCurlyDoubleQuote]Format,\[CloseCurlyDoubleQuote] then \
+\[OpenCurlyDoubleQuote]Style,\[CloseCurlyDoubleQuote] then \
+\[OpenCurlyDoubleQuote]Text.\[CloseCurlyDoubleQuote]  You can aslo create \
+titles, subsections, etc."
+}], "Text",
+ CellChangeTimes->{{3.651922401658276*^9, 3.651922607307363*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], " ", ":=", " ", 
+  RowBox[{"Cos", "[", 
+   RowBox[{"2", "Pi", " ", "x"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"f", "[", "1", "]"}]}], "Input",
+ CellChangeTimes->{{3.651922362166391*^9, 3.651922378183626*^9}, {
+  3.65192243339188*^9, 3.65192243356923*^9}}],
+
+Cell[TextData[{
+ "Another way to enter text is to click the \[OpenCurlyDoubleQuote]+\
+\[OpenCurlyDoubleQuote] sign above a cell. Notice this also gives you the \
+option of \[OpenCurlyDoubleQuote]Free-form input.\[CloseCurlyDoubleQuote] \
+Under this option, you type a command for ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " in plain English, and it will try to translate it into a formal ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " command.  "
+}], "Text",
+ CellChangeTimes->{{3.651922631107766*^9, 3.651922753643084*^9}, {
+  3.651922791171915*^9, 3.651922797114127*^9}, {3.651924513859541*^9, 
+  3.6519245547784557`*^9}}],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "graph y=sin(x) from x=-2pi to x=2pi", 
+   Typeset`newq$$ = "graph y=sin(x) from x=-2pi to x=2pi", Typeset`chosen$$ = 
+   "Plot[Sin[x], {x, -2*Pi, 2*Pi}]", Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "graph y=sin(x) from x=-2pi to x=2pi", 
+                  Defer[
+                   Plot[
+                    Sin[Global`x], {Global`x, (-2) Pi, 2 Pi}]], "Fast parse"]; 
+                Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 RowBox[{"Plot", "[", 
+                  RowBox[{
+                   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 RowBox[{"Plot", "[", 
+                  RowBox[{
+                   RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    RowBox[{"Plot", "[", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}]], "Input"], 
+                  All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "graph y=sin(x) from x=-2pi to x=2pi", 
+                    Defer[
+                    Plot[
+                    Sin[Global`x], {Global`x, (-2) Pi, 2 Pi}]], "Fast parse"]; 
+                    Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    RowBox[{"Plot", "[", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    RowBox[{"Plot", "[", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    RowBox[{"Plot", "[", 
+                    RowBox[{
+                    RowBox[{"Sin", "[", "x", "]"}], ",", " ", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", " ", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], "*", "Pi"}], ",", " ", 
+                    RowBox[{"2", "*", "Pi"}]}], "}"}]}], "]"}]], "Input"], 
+                    All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput"],
+
+Cell["Try to integrate a function.", "Text",
+ CellChangeTimes->{{3.6519231052261*^9, 3.6519231220477*^9}}],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryParseResults",
+  DynamicModuleBox[{Typeset`q$$ = "integral of x^2 - x^4 + e^(2 x)", 
+   Typeset`newq$$ = "integral of x^2 - x^4 + e^(2 x)", Typeset`chosen$$ = 
+   "Integrate[x^2 - x^4 + E^(2*x), x]", Typeset`open$$ = False}, 
+   PaneSelectorBox[{False->
+    DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+     WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+     TagBox[
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           InputFieldBox[Dynamic[Typeset`newq$$], String,
+            Appearance->None,
+            BaseStyle->{"CalculateInput"},
+            ContinuousAction->True,
+            Enabled->True,
+            FieldSize->{{1, 40}, {1, 
+               DirectedInfinity[1]}},
+            TrapSelection->False], 
+           ItemBox[
+            ButtonBox[
+             PaneSelectorBox[{True->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "OrangeSquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ], False->
+              TagBox[
+               TooltipBox[
+                
+                DynamicBox[FEPrivate`FrontEndResource[
+                 "WABitmaps", "GraySquarePlus"],
+                 ImageSizeCache->{10., {3., 8.}}],
+                DynamicBox[
+                 ToBoxes[
+                  FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"], 
+                  StandardForm]]],
+               Annotation[#, 
+                Dynamic[
+                 FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"]], 
+                "Tooltip"]& ]}, Dynamic[WolframAlphaClient`Private`show$$],
+              ImageSize->All],
+             Appearance->None,
+             ButtonFunction:>(Quiet[
+                WolframAlpha[]]; If[
+                Or[
+                 CurrentValue["OptionKey"], 
+                 CurrentValue["AltKey"]], SelectionMove[
+                  ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                  Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                   "TextForm"], All], Typeset`open$$ = True; 
+                WolframAlphaClient`Private`extrudeFromFastParse[
+                 "integral of x^2 - x^4 + e^(2 x)", 
+                  Defer[
+                   Integrate[
+                   Global`x^2 - Global`x^4 + E^(2 Global`x), Global`x]], 
+                  "Fast parse"]; Typeset`open$$ = False]),
+             Evaluator->Automatic,
+             Method->"Queued"],
+            Alignment->{Right, Top},
+            StripOnInput->False]},
+          {
+           PaneBox[
+            TagBox[
+             TooltipBox[
+              ButtonBox[
+               PaneSelectorBox[{False->
+                StyleBox[
+                 RowBox[{"Integrate", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], "]"}],
+                 StripOnInput->False,
+                 NumberMarks->False], True->
+                StyleBox[
+                 RowBox[{"Integrate", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], "]"}],
+                 StripOnInput->False,
+                 ShowSyntaxStyles->False,
+                 NumberMarks->False,
+                 FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                 CurrentValue["MouseOver"]],
+                BaseStyle->{ShowStringCharacters -> True},
+                FrameMargins->0,
+                ImageSize->Automatic],
+               Alignment->Left,
+               Appearance->None,
+               BaseStyle->{},
+               ButtonFunction:>(SelectionMove[
+                  ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                  ButtonNotebook[], 
+                  Cell[
+                   BoxData[
+                    RowBox[{"Integrate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], 
+                    "]"}]], "Input"], All]; SelectionMove[
+                  ButtonNotebook[], After, CellContents]),
+               Evaluator->Automatic,
+               ImageSize->Automatic,
+               Method->"Preemptive"],
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                StandardForm]]],
+             Annotation[#, 
+              Dynamic[
+               FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+              "Tooltip"]& ],
+            AppearanceElements->{},
+            BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+            ImageSize->{Automatic, {1, 100}},
+            Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+         },
+         AutoDelete->False,
+         BaselinePosition->{1, 1},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxDividers->{
+          "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Grid"],
+       Alignment->Top,
+       Background->Dynamic[
+         FEPrivate`If[
+          FEPrivate`And[
+           FEPrivate`SameQ[
+            FEPrivate`Head[Typeset`newq$$], String], 
+           FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+          RGBColor[1., 0.975, 0.95], 
+          GrayLevel[1]]],
+       BaselinePosition->Baseline,
+       FrameStyle->GrayLevel[0.85],
+       ImageSize->Automatic,
+       RoundingRadius->5,
+       StripOnInput->False],
+      EventHandlerTag[{
+       "MouseEntered" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, True], "MouseExited" :> 
+        FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+        "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+     DynamicModuleValues:>{}], True->
+    TagBox[GridBox[{
+       {
+        DynamicModuleBox[{WolframAlphaClient`Private`show$$ = False, 
+         WolframAlphaClient`Private`assumptionsQ$$ = False}, 
+         TagBox[
+          FrameBox[
+           TagBox[GridBox[{
+              {
+               InputFieldBox[Dynamic[Typeset`newq$$], String,
+                Appearance->None,
+                BaseStyle->{"CalculateInput"},
+                ContinuousAction->True,
+                Enabled->True,
+                FieldSize->{{1, 40}, {1, 
+                   DirectedInfinity[1]}},
+                TrapSelection->False], 
+               ItemBox[
+                ButtonBox[
+                 PaneSelectorBox[{True->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "OrangeSquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ], False->
+                  TagBox[
+                   TooltipBox[
+                    
+                    DynamicBox[FEPrivate`FrontEndResource[
+                    "WABitmaps", "GraySquarePlus"]],
+                    DynamicBox[
+                    ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "ShowAllResults"],
+                     StandardForm]]],
+                   Annotation[#, 
+                    Dynamic[
+                    FEPrivate`FrontEndResource[
+                    "WAStrings", "ShowAllResults"]], "Tooltip"]& ]}, Dynamic[
+                  WolframAlphaClient`Private`show$$],
+                  ImageSize->All],
+                 Appearance->None,
+                 ButtonFunction:>(Quiet[
+                    WolframAlpha[]]; If[
+                    Or[
+                    CurrentValue["OptionKey"], 
+                    CurrentValue["AltKey"]], SelectionMove[
+                    ButtonNotebook[], All, ButtonCell, AutoScroll -> False]; 
+                    NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    Typeset`newq$$, "WolframAlphaShort", FormatType -> 
+                    "TextForm"], All], Typeset`open$$ = True; 
+                    WolframAlphaClient`Private`extrudeFromFastParse[
+                    "integral of x^2 - x^4 + e^(2 x)", 
+                    Defer[
+                    Integrate[
+                    Global`x^2 - Global`x^4 + E^(2 Global`x), Global`x]], 
+                    "Fast parse"]; Typeset`open$$ = False]),
+                 Evaluator->Automatic,
+                 Method->"Queued"],
+                Alignment->{Right, Top},
+                StripOnInput->False]},
+              {
+               PaneBox[
+                TagBox[
+                 TooltipBox[
+                  ButtonBox[
+                   PaneSelectorBox[{False->
+                    StyleBox[
+                    RowBox[{"Integrate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], "]"}],
+                    StripOnInput->False,
+                    NumberMarks->False], True->
+                    StyleBox[
+                    RowBox[{"Integrate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], "]"}],
+                    StripOnInput->False,
+                    ShowSyntaxStyles->False,
+                    NumberMarks->False,
+                    FontColor->RGBColor[1, 0.5, 0]]}, Dynamic[
+                    CurrentValue["MouseOver"]],
+                    BaseStyle->{ShowStringCharacters -> True},
+                    FrameMargins->0,
+                    ImageSize->Automatic],
+                   Alignment->Left,
+                   Appearance->None,
+                   BaseStyle->{},
+                   ButtonFunction:>(SelectionMove[
+                    ButtonNotebook[], All, ButtonCell]; NotebookWrite[
+                    ButtonNotebook[], 
+                    Cell[
+                    BoxData[
+                    RowBox[{"Integrate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"x", "^", "2"}], " ", "-", " ", 
+                    RowBox[{"x", "^", "4"}], " ", "+", " ", 
+                    RowBox[{"E", "^", 
+                    RowBox[{"(", 
+                    RowBox[{"2", "*", "x"}], ")"}]}]}], ",", " ", "x"}], 
+                    "]"}]], "Input"], All]; SelectionMove[
+                    ButtonNotebook[], After, CellContents]),
+                   Evaluator->Automatic,
+                   ImageSize->Automatic,
+                   Method->"Preemptive"],
+                  DynamicBox[
+                   ToBoxes[
+                    FEPrivate`FrontEndResource["WAStrings", "RemoveResults"], 
+                    StandardForm]]],
+                 Annotation[#, 
+                  Dynamic[
+                   FEPrivate`FrontEndResource["WAStrings", "RemoveResults"]], 
+                  "Tooltip"]& ],
+                AppearanceElements->{},
+                BaseStyle->{ShowStringCharacters -> True, ScriptLevel -> 0},
+                ImageSize->{Automatic, {1, 100}},
+                Scrollbars->{False, Automatic}], "\[SpanFromLeft]"}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             FrameStyle->GrayLevel[0.85],
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxDividers->{
+              "Columns" -> {{False}}, "Rows" -> {False, {True}, False}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"],
+           Alignment->Top,
+           Background->Dynamic[
+             FEPrivate`If[
+              FEPrivate`And[
+               FEPrivate`SameQ[
+                FEPrivate`Head[Typeset`newq$$], String], 
+               FEPrivate`UnsameQ[Typeset`q$$, Typeset`newq$$]], 
+              RGBColor[1., 0.975, 0.95], 
+              GrayLevel[1]]],
+           BaselinePosition->Baseline,
+           FrameStyle->GrayLevel[0.85],
+           ImageSize->Automatic,
+           RoundingRadius->5,
+           StripOnInput->False],
+          
+          EventHandlerTag[{
+           "MouseEntered" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, True], 
+            "MouseExited" :> 
+            FEPrivate`Set[WolframAlphaClient`Private`show$$, False], Method -> 
+            "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> True}]],
+         DynamicModuleValues:>{}]},
+       {
+        InterpretationBox[
+         StyleBox[
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEExpressions", "NecklaceAnimator"][20]],
+          AnimatorBoxOptions->{ImageSize->20}],
+         Animator[Appearance -> "Necklace", ImageSize -> 20],
+         BaseStyle->{"Deploy"}]}
+      },
+      BaselinePosition->{1, 1},
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, Dynamic[
+     TrueQ[Typeset`open$$]],
+    BaseStyle->{Deployed -> True},
+    ImageSize->Automatic],
+   DynamicModuleValues:>{}],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "WolframAlphaShortInput"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Teaching yourself Mathematica", "Section",
+ CellChangeTimes->{{3.6519236508395042`*^9, 3.651923665822979*^9}}],
+
+Cell[TextData[{
+ StyleBox["Free-form input -",
+  FontWeight->"Bold"],
+ " This is a good way to discover possible commands and their usage.  \
+Clicking on the ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " input will automatically replace your input, and the \
+\[OpenCurlyDoubleQuote]+\[OpenCurlyDoubleQuote] symbol gives other possible \
+expressions."
+}], "Text",
+ CellChangeTimes->{{3.651924294033455*^9, 3.651924367505282*^9}}],
+
+Cell[TextData[{
+ StyleBox["Classroom Assistant Palette - ",
+  FontWeight->"Bold"],
+ "Open this under the Palettes menu.  The \[OpenCurlyDoubleQuote]Basic \
+Commands\[CloseCurlyDoubleQuote] contains most commands you will ever need, \
+and the command will enter a template for you to fill in."
+}], "Text",
+ CellChangeTimes->{{3.6519230766173553`*^9, 3.651923092713545*^9}, {
+  3.651923203283391*^9, 3.6519232495446177`*^9}, {3.651923299866562*^9, 
+  3.6519233876905212`*^9}, {3.6519237082367983`*^9, 3.651923821376568*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   TagBox[
+    FrameBox["expr"],
+    "SelectionPlaceholder"], ",", 
+   TagBox[
+    FrameBox["var"],
+    "Placeholder"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651923252643219*^9, 3.6519232963425817`*^9}, {
+   3.651923399964884*^9, 3.651923425348391*^9}, {3.651923832126453*^9, 
+   3.651923850535552*^9}, 3.652039840454801*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", 
+   TagBox[
+    FrameBox["lower"],
+    "Placeholder"], 
+   TagBox[
+    FrameBox["upper"],
+    "Placeholder"]], 
+  RowBox[{
+   TagBox[
+    FrameBox["expr"],
+    "SelectionPlaceholder"], 
+   RowBox[{"\[DifferentialD]", 
+    TagBox[
+     FrameBox["var"],
+     "Placeholder"]}]}]}]], "Input",
+ CellChangeTimes->{{3.651923440433139*^9, 3.6519234758972397`*^9}, {
+  3.6519240487813063`*^9, 3.651924057725444*^9}}],
+
+Cell[TextData[{
+ StyleBox["Auto-Completion -",
+  FontWeight->"Bold"],
+ " If you begin typing a command, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " will suggest the rest of the command.  You can also see the syntax by \
+clicking the down arrows.  For example, begin typing Sum, and ..."
+}], "Text",
+ CellChangeTimes->{{3.651923886948824*^9, 3.651923932833304*^9}, {
+  3.6519240642154713`*^9, 3.651924080837967*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   TagBox[
+    FrameBox["f"],
+    "Placeholder"], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TagBox[
+      FrameBox["i"],
+      "Placeholder"], ",", 
+     TagBox[
+      FrameBox[
+       SubscriptBox["i", "min"]],
+      "Placeholder"], ",", 
+     TagBox[
+      FrameBox[
+       SubscriptBox["i", "max"]],
+      "Placeholder"]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651923936137298*^9, 3.6519240342653437`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Documentation Center - ",
+  FontWeight->"Bold"],
+ "This contains all the information about a command\[CloseCurlyQuote]s usage \
+along with examples.  The sample code can be modified and rerun within the \
+Documentation Center.  For example, figure out how to graph both sin(x) and \
+cos(x) on the same graph by looking up \[OpenCurlyDoubleQuote]Plot.\
+\[CloseCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.651924087606045*^9, 3.6519241925744057`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], ",", 
+     RowBox[{"Cos", "[", "x", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], 
+  "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Graphs of functions", "Section",
+ CellChangeTimes->{{3.652023777835561*^9, 3.652023793626978*^9}}],
+
+Cell["Function(s) of 1-variable.", "Text",
+ CellChangeTimes->{{3.652023801297287*^9, 3.652023815986124*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", "^", "2"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.652023831703207*^9, 3.652023848737755*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], ",", " ", 
+     RowBox[{
+      RowBox[{"2", "x"}], "-", "4"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.652023850375811*^9, 3.6520238655050583`*^9}}],
+
+Cell["Function(s) of 2-variables.", "Text",
+ CellChangeTimes->{{3.652023870137609*^9, 3.652023878097417*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], " ", "+", " ", 
+    RowBox[{"y", "^", "2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.652023880149172*^9, 3.652023899488014*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "2"}], " ", "+", " ", 
+      RowBox[{"y", "^", "2"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"2", "x"}], "-", 
+      RowBox[{"4", "y"}]}]}], " ", "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.652023908996934*^9, 3.652023930016571*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"2", "x"}], "-", "y", "+", "5"}], ",", 
+     RowBox[{
+      RowBox[{"3", "x"}], "-", "2", "+", "y"}], ",", " ", 
+     RowBox[{
+      RowBox[{"4", "x"}], "-", 
+      RowBox[{"2", "y"}], "+", "10"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2D and 3D Parametric Graphs", "Section",
+ CellChangeTimes->{{3.651924385256666*^9, 3.651924395576591*^9}}],
+
+Cell[TextData[{
+ "Function f: ",
+ StyleBox["R",
+  FontWeight->"Bold"],
+ " -> ",
+ StyleBox["R^2",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.652023969530139*^9, 3.652024021152013*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+     RowBox[{"7", 
+      RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6519246543951807`*^9, 3.651924672329043*^9}}],
+
+Cell[TextData[{
+ "Two functions Function f: ",
+ StyleBox["R",
+  FontWeight->"Bold"],
+ " -> ",
+ StyleBox["R^2",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.65202403187928*^9, 3.652024038507712*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", 
+        RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+       RowBox[{"7", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Cos", "[", "t", "]"}], ",", " ", 
+       RowBox[{"Sin", "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651924699402746*^9, 3.651924718731558*^9}}],
+
+Cell["\<\
+Click on \[OpenCurlyDoubleQuote]More, Legends, Formulas\
+\[CloseCurlyDoubleQuote] to get a legend like the following.\
+\>", "Text",
+ CellChangeTimes->{{3.652024066297173*^9, 3.652024079254653*^9}, {
+  3.6520241185182257`*^9, 3.652024164821806*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+       RowBox[{"7", " ", 
+        RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Cos", "[", "t", "]"}], ",", 
+       RowBox[{"Sin", "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", " ", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"PlotLegends", "\[Rule]", "\"\<Expressions\>\""}]}], 
+  "]"}]], "Input",
+ NumberMarks->False],
+
+Cell["\<\
+Graphing previously defined functions.  Note: the semicolon; prevents the \
+output from being printed on the screen.\
+\>", "Text",
+ CellChangeTimes->{{3.652024176518064*^9, 3.652024215605373*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", "t_", "]"}], ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"2", 
+     RowBox[{"Cos", "[", "t", "]"}]}], ",", " ", 
+    RowBox[{"7", 
+     RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "[", "t_", "]"}], " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Cos", "[", "t", "]"}], ",", " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "t"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], ",", " ", 
+     RowBox[{"g", "[", "t", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.651924965239094*^9, 3.651925073975347*^9}}],
+
+Cell[TextData[{
+ "Function ",
+ StyleBox["R -> R^3.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.6520243746526833`*^9, 3.652024393282843*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", "t", "]"}], ",", 
+     RowBox[{"Sin", "[", "t", "]"}], ",", "t"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"4", "Pi"}]}], "}"}]}], "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Visualizing spans of vectors.", "Section",
+ CellChangeTimes->{{3.652024572113446*^9, 3.652024592424254*^9}}],
+
+Cell["Parameterizing a line.", "Text",
+ CellChangeTimes->{{3.6520242301415358`*^9, 3.652024249892724*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", "-", "t"}], ",", 
+     RowBox[{"1", "+", 
+      RowBox[{"3", "t"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.651925089662382*^9, 3.651925104024427*^9}, {
+  3.651925189410625*^9, 3.651925232047686*^9}}],
+
+Cell["Using scalar multiplication.", "Text",
+ CellChangeTimes->{{3.6520242663568277`*^9, 3.652024278812434*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v0", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", "3"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"v0", " ", "+", " ", 
+    RowBox[{"r", " ", "v"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", " ", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.651925262889069*^9, 3.651925302255394*^9}, {
+  3.652039595143002*^9, 3.652039662980812*^9}}],
+
+Cell[TextData[{
+ "Linear combinations of two vectors give a parametric function ",
+ StyleBox["R^2 -> R^2",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.652024287068701*^9, 3.652024326852353*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", " ", "2"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", " ", "v1"}], " ", "+", " ", 
+    RowBox[{"s", " ", "v2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", " ", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.651925323679694*^9, 3.651925344877968*^9}}],
+
+Cell["Visualizing span(w1), span(w2), span(w1,w2).", "Text",
+ CellChangeTimes->{{3.6520244089546547`*^9, 3.6520244429705753`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"w1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", " ", "1", ",", " ", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", " ", "2", ",", " ", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", " ", 
+  RowBox[{
+   RowBox[{"r", " ", "w1"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", " ", 
+  RowBox[{
+   RowBox[{"r", " ", "w2"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", " ", "w1"}], " ", "+", " ", 
+    RowBox[{"s", " ", "w2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"s", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6519254196556273`*^9, 3.651925485655328*^9}, 
+   3.65202467288223*^9, {3.652024725993587*^9, 3.652024836321059*^9}, {
+   3.652024869231711*^9, 3.652024895516683*^9}, {3.652024949369431*^9, 
+   3.6520249501330853`*^9}, {3.652039685868363*^9, 3.652039688253643*^9}}],
+
+Cell["\<\
+What is the dimension of span(v1,v2,v3) for given vectors?  Let\
+\[CloseCurlyQuote]s check graphically.\
+\>", "Text",
+ CellChangeTimes->{{3.652024972086145*^9, 3.652025030155857*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v3", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"r1", " ", "v1"}], " ", "+", " ", 
+      RowBox[{"r2", " ", "v2"}]}], ",", " ", 
+     RowBox[{"r1", " ", "v3"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r1", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r2", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.652025017051989*^9, 3.652025080394932*^9}, {
+  3.652025933571541*^9, 3.6520259580411777`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v3", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"r1", " ", "v1"}], " ", "+", " ", 
+      RowBox[{"r2", " ", "v2"}]}], ",", " ", 
+     RowBox[{"r1", " ", "v3"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r1", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"r2", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.652025998359288*^9, 3.6520260025684423`*^9}, 
+   3.652026599947322*^9, {3.6520398109403133`*^9, 3.652039811898962*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 100, 1, 92, "Title"],
+Cell[CellGroupData[{
+Cell[705, 27, 96, 1, 64, "Section"],
+Cell[804, 30, 601, 11, 68, "Text"],
+Cell[1408, 43, 319, 7, 46, "Input"],
+Cell[1730, 52, 643, 14, 68, "Text"],
+Cell[2376, 68, 14929, 364, 61, "WolframAlphaShortInput"],
+Cell[17308, 434, 106, 1, 30, "Text"],
+Cell[17417, 437, 15017, 364, 61, "WolframAlphaShortInput"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32471, 806, 116, 1, 64, "Section"],
+Cell[32590, 809, 437, 11, 49, "Text"],
+Cell[33030, 822, 522, 9, 49, "Text"],
+Cell[33555, 833, 381, 11, 36, "Input"],
+Cell[33939, 846, 466, 18, 58, "Input"],
+Cell[34408, 866, 426, 10, 49, "Text"],
+Cell[34837, 878, 466, 19, 37, "Input"],
+Cell[35306, 899, 484, 9, 68, "Text"],
+Cell[35793, 910, 347, 11, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36177, 926, 104, 1, 64, "Section"],
+Cell[36284, 929, 108, 1, 30, "Text"],
+Cell[36395, 932, 265, 7, 28, "Input"],
+Cell[36663, 941, 371, 11, 28, "Input"],
+Cell[37037, 954, 109, 1, 30, "Text"],
+Cell[37149, 957, 432, 12, 28, "Input"],
+Cell[37584, 971, 567, 17, 28, "Input"],
+Cell[38154, 990, 517, 17, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38708, 1012, 112, 1, 64, "Section"],
+Cell[38823, 1015, 196, 8, 30, "Text"],
+Cell[39022, 1025, 398, 12, 28, "Input"],
+Cell[39423, 1039, 209, 8, 30, "Text"],
+Cell[39635, 1049, 590, 18, 28, "Input"],
+Cell[40228, 1069, 258, 5, 30, "Text"],
+Cell[40489, 1076, 624, 20, 46, "Input"],
+Cell[41116, 1098, 206, 4, 49, "Text"],
+Cell[41325, 1104, 1056, 31, 80, "Input"],
+Cell[42384, 1137, 154, 5, 30, "Text"],
+Cell[42541, 1144, 298, 9, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42876, 1158, 114, 1, 64, "Section"],
+Cell[42993, 1161, 106, 1, 30, "Text"],
+Cell[43102, 1164, 408, 12, 28, "Input"],
+Cell[43513, 1178, 112, 1, 30, "Text"],
+Cell[43628, 1181, 633, 18, 63, "Input"],
+Cell[44264, 1201, 212, 6, 30, "Text"],
+Cell[44479, 1209, 700, 20, 63, "Input"],
+Cell[45182, 1231, 130, 1, 30, "Text"],
+Cell[45315, 1234, 1437, 40, 97, "Input"],
+Cell[46755, 1276, 193, 4, 30, "Text"],
+Cell[46951, 1282, 1012, 31, 80, "Input"],
+Cell[47966, 1315, 1037, 31, 80, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

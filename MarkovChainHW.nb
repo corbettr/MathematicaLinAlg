@@ -1,0 +1,1150 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     41922,       1141]
+NotebookOptionsPosition[     40362,       1084]
+NotebookOutlinePosition[     40721,       1100]
+CellTagsIndexPosition[     40678,       1097]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 615: Homework Due 12/9", "Section",
+ CellChangeTimes->{{3.658165085962043*^9, 3.658165094665913*^9}}],
+
+Cell["Page 304, number 2.  Here is the transition matrix \
+\[OpenCurlyDoubleQuote]trans\[CloseCurlyDoubleQuote].", "Text",
+ CellChangeTimes->{{3.6581636516517*^9, 3.6581637048454657`*^9}, {
+  3.658165097921479*^9, 3.658165125177021*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"trans1", " ", "=", 
+    RowBox[{"N", "[", " ", 
+     RowBox[{"(", GridBox[{
+        {
+         RowBox[{"1", "/", "6"}], "0", "0", "0", "0", "0"},
+        {
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"2", "/", "6"}], "0", "0", "0", "0"},
+        {
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"3", "/", "6"}], "0", "0", "0"},
+        {
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"4", "/", "6"}], "0", "0"},
+        {
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"5", "/", "6"}], "0"},
+        {
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], 
+         RowBox[{"1", "/", "6"}], "1"}
+       }], ")"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"NumberForm", "[", 
+    RowBox[{
+     RowBox[{"MatrixForm", "[", "\[IndentingNewLine]", 
+      RowBox[{"MatrixPower", "[", 
+       RowBox[{"trans1", ",", " ", "exponent"}], "]"}], " ", "]"}], ",", " ", 
+     
+     RowBox[{"{", 
+      RowBox[{"4", ",", "3"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"exponent", ",", " ", "1", ",", " ", "60", ",", " ", "1", ",", 
+     RowBox[{"Appearance", " ", "\[Rule]", " ", "\"\<Labeled\>\""}]}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658163417038904*^9, 3.658163511949686*^9}, {
+  3.658589448269833*^9, 3.658589450397335*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`exponent$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`exponent$$], 1, 60, 1}}, Typeset`size$$ = {
+    301., {45.634033203125, 51.365966796875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`exponent$130868$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`exponent$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`exponent$$, $CellContext`exponent$130868$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> NumberForm[
+        MatrixForm[
+         MatrixPower[$CellContext`trans1, $CellContext`exponent$$]], {4, 3}], 
+      "Specifications" :> {{$CellContext`exponent$$, 1, 60, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{346., {91., 96.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6655118673368273`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The vector for starting in state 1 after 5 throws is given by\
+\>", "Text",
+ CellChangeTimes->{{3.658163709214596*^9, 3.658163715666287*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MatrixPower", "[", 
+   RowBox[{"trans1", ",", "5"}], "]"}], ".", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", "1", "}"}], ",", 
+    RowBox[{"{", "0", "}"}], ",", 
+    RowBox[{"{", "0", "}"}], ",", 
+    RowBox[{"{", "0", "}"}], ",", 
+    RowBox[{"{", "0", "}"}], ",", 
+    RowBox[{"{", "0", "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.6581637198915367`*^9, 3.658163755529655*^9}, 
+   3.6585894525168123`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "0.00012860082304526747`", "}"}], ",", 
+   RowBox[{"{", "0.003986625514403292`", "}"}], ",", 
+   RowBox[{"{", "0.02713477366255144`", "}"}], ",", 
+   RowBox[{"{", "0.1004372427983539`", "}"}], ",", 
+   RowBox[{"{", "0.270190329218107`", "}"}], ",", 
+   RowBox[{"{", "0.5981224279835391`", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.665511867747188*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Side Remark: Is there an easy way to create the unit vector ",
+ StyleBox["e",
+  FontSlant->"Italic"],
+ "_i = (0, 0, ..., 1, ..., 0)?  I don\[CloseCurlyQuote]t know, but here is \
+one possible solution."
+}], "Text",
+ CellChangeTimes->{{3.658164820762699*^9, 3.658164825234063*^9}, {
+  3.6581649709788322`*^9, 3.658164974679674*^9}, {3.658589349757408*^9, 
+  3.658589398554804*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"e", "[", 
+   RowBox[{"entry_", ",", "length_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"Module", "[", "  ", 
+   RowBox[{
+    RowBox[{"{", "tempmatrix", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"tempmatrix", " ", "=", " ", 
+       RowBox[{"{", 
+        RowBox[{"Table", "[", 
+         RowBox[{"0", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"counter", ",", " ", "1", ",", " ", "length"}], "}"}]}], 
+         "]"}], "}"}]}], " ", ")"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"tempmatrix", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "entry"}], "]"}], "]"}], "=", "1"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Transpose", "[", "tempmatrix", "]"}]}]}], " ", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.658164860940399*^9, 3.658164929616767*^9}, {
+  3.658165035825015*^9, 3.65816504159093*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MatrixPower", "[", 
+   RowBox[{"trans1", ",", "5"}], "]"}], ".", 
+  RowBox[{"e", "[", 
+   RowBox[{"1", ",", "6"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.658164066700861*^9, 3.658164069742694*^9}, {
+   3.658164802659667*^9, 3.658164812330797*^9}, {3.6581649130333977`*^9, 
+   3.658164915303857*^9}, {3.658164982587184*^9, 3.658164999594599*^9}, 
+   3.658165061610931*^9, 3.658589454812265*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "0.00012860082304526747`", "}"}], ",", 
+   RowBox[{"{", "0.003986625514403292`", "}"}], ",", 
+   RowBox[{"{", "0.02713477366255144`", "}"}], ",", 
+   RowBox[{"{", "0.1004372427983539`", "}"}], ",", 
+   RowBox[{"{", "0.270190329218107`", "}"}], ",", 
+   RowBox[{"{", "0.5981224279835391`", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.665511867791521*^9}]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[" ", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 2}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 4}],
+
+Cell["\<\
+3. Note that the transition matrix, as written in the textbook, is actually \
+the transpose of what we want.\
+\>", "Text",
+ CellChangeTimes->{{3.6581651384724283`*^9, 3.658165138896805*^9}, {
+  3.658165176765861*^9, 3.658165192493696*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"trans2", " ", "=", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"(", GridBox[{
+        {".787", "0", "0", ".111", ".102"},
+        {"0", ".966", ".034", "0", "0"},
+        {"0", ".063", ".937", "0", "0"},
+        {"0", "0", ".074", ".612", ".314"},
+        {".021", ".009", ".005", ".010", ".954"}
+       }], ")"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"NumberForm", "[", 
+    RowBox[{
+     RowBox[{"MatrixForm", "[", "\[IndentingNewLine]", 
+      RowBox[{"MatrixPower", "[", 
+       RowBox[{"trans2", ",", " ", "exponent"}], "]"}], " ", "]"}], ",", " ", 
+     
+     RowBox[{"{", 
+      RowBox[{"4", ",", "3"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"exponent", ",", " ", "1", ",", " ", "60", ",", " ", "1", ",", 
+     RowBox[{"Appearance", " ", "\[Rule]", " ", "\"\<Labeled\>\""}]}], 
+    "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.658165225507598*^9, 3.658165287091831*^9}, {
+   3.658165322213873*^9, 3.6581655375674553`*^9}, 3.658165582491857*^9, {
+   3.658589457316531*^9, 3.6585894599973*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`exponent$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`exponent$$], 1, 60, 1}}, Typeset`size$$ = {
+    253., {37.134033203125, 42.865966796875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`exponent$130895$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`exponent$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`exponent$$, $CellContext`exponent$130895$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> NumberForm[
+        MatrixForm[
+         MatrixPower[$CellContext`trans2, $CellContext`exponent$$]], {4, 3}], 
+      "Specifications" :> {{$CellContext`exponent$$, 1, 60, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{320., {82., 87.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6655118678613453`*^9}]
+}, Open  ]],
+
+Cell["\<\
+b. Letting v0 be the initial distributions, we obtain the distribution after \
+1-4 iterations.  Note they are listed as row vectors.\
+\>", "Text",
+ CellChangeTimes->{{3.658165589791255*^9, 3.6581656491324167`*^9}, {
+  3.6581657303727407`*^9, 3.658165730554633*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"v0", " ", "=", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{".02", ",", ".02", ",", ".02", ",", ".02", ",", ".9"}], "}"}], 
+      "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "1"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "2"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "3"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "4"}], "]"}], ".", "v0"}]}], 
+   "\[IndentingNewLine]", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"MatrixPower", "[", 
+       RowBox[{"trans2", ",", "k"}], "]"}], ".", "v0"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", " ", "1", ",", " ", "4"}], "}"}]}], "]"}], " ", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"TableHeadings", " ", "\[Rule]", " ", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<n=1\>\"", ",", " ", "\"\<n=2\>\"", ",", " ", "\"\<n=3\>\"", ",", 
+        " ", "\"\<n=4\>\""}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<NE\>\"", ",", " ", "\"\<NC\>\"", ",", " ", "\"\<S\>\"", ",", " ", 
+        "\"\<W\>\"", ",", " ", "\"\<Z\>\""}], "}"}]}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.658165225507598*^9, 3.658165287091831*^9}, {
+   3.658165322213873*^9, 3.6581655375674553`*^9}, 3.658165582491857*^9, {
+   3.658165661045102*^9, 3.658165677651284*^9}, {3.6581657182451963`*^9, 
+   3.658165723098627*^9}, {3.6581664549586897`*^9, 3.658166483470674*^9}, 
+   3.658166537178485*^9, 3.65858946344035*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"NE\"\>",
+       HoldForm], 
+      TagBox["\<\"NC\"\>",
+       HoldForm], 
+      TagBox["\<\"S\"\>",
+       HoldForm], 
+      TagBox["\<\"W\"\>",
+       HoldForm], 
+      TagBox["\<\"Z\"\>",
+       HoldForm]},
+     {
+      TagBox["\<\"n=1\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.034640000000000004`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.02868`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.025400000000000002`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.02346`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.86692`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=2\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.045467`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.03710735999999999`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.03084556`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.02687176`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.8379414`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=3\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.053379298400000004`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.04533045263999999`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.0363421572`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.029871768119999996`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.81247146224`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=4\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.05907140854784`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.05339101631399999`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.04186670483824001`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.03233133883424`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.7899221986034399`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{"n=1", "n=2", "n=3", "n=4"}, {
+      "NE", "NC", "S", "W", "Z"}}]]]], "Output",
+ CellChangeTimes->{3.6655118678896646`*^9}]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell["c. For our new distribution, we get", "Text",
+ CellChangeTimes->{{3.658165734289837*^9, 3.658165747482156*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"v0", " ", "=", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", ".6522", ",", ".3478", ",", "0", ",", "0"}], "}"}], 
+      "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "1"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "2"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "3"}], "]"}], ".", "v0"}], "\[IndentingNewLine]", 
+    
+    RowBox[{
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"trans", ",", "4"}], "]"}], ".", "v0"}]}], 
+   "\[IndentingNewLine]", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"MatrixPower", "[", 
+       RowBox[{"trans2", ",", "k"}], "]"}], ".", "v0"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"k", ",", " ", "1", ",", " ", "4"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"TableHeadings", " ", "\[Rule]", " ", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<n=1\>\"", ",", " ", "\"\<n=2\>\"", ",", " ", "\"\<n=3\>\"", ",", 
+        " ", "\"\<n=4\>\""}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<NE\>\"", ",", " ", "\"\<NC\>\"", ",", " ", "\"\<S\>\"", ",", " ", 
+        "\"\<W\>\"", ",", " ", "\"\<Z\>\""}], "}"}]}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.658165762346119*^9, 3.658165782697411*^9}, {
+   3.658166241157647*^9, 3.658166332242879*^9}, {3.658166413397935*^9, 
+   3.658166413500705*^9}, 3.658166527519195*^9, 3.658589466133297*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"NE\"\>",
+       HoldForm], 
+      TagBox["\<\"NC\"\>",
+       HoldForm], 
+      TagBox["\<\"S\"\>",
+       HoldForm], 
+      TagBox["\<\"W\"\>",
+       HoldForm], 
+      TagBox["\<\"Z\"\>",
+       HoldForm]},
+     {
+      TagBox["\<\"n=1\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.6519366`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.3480634`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=2\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.6516987498`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.3483012502`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=3\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.6514839710694`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.3485160289306`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]},
+     {
+      TagBox["\<\"n=4\"\>",
+       HoldForm], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.6512900258756682`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.34870997412433186`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column], 
+      TagBox[GridBox[{
+         {"0.`"}
+        },
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.5599999999999999]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {{
+             Offset[0.2]}}, "RowsIndexed" -> {}}],
+       Column]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{"n=1", "n=2", "n=3", "n=4"}, {
+      "NE", "NC", "S", "W", "Z"}}]]]], "Output",
+ CellChangeTimes->{3.6655118679166317`*^9}]
+}, Open  ]],
+
+Cell["\<\
+d. It is easiest to analyze whether the system has reached an equilibrium by \
+using the Manipulate command. The system has not yet reached an equilibrium \
+by n=50. It does not reach an equilibrium until roughly n=200 or 300.  At \
+this point, everything is concentrated in the NC and S regions.\
+\>", "Text",
+ CellChangeTimes->{{3.658165801322768*^9, 3.658165829425147*^9}, {
+  3.658165868371117*^9, 3.6581658797132683`*^9}, {3.658165918600647*^9, 
+  3.658166003950823*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"NumberForm", "[", 
+    RowBox[{
+     RowBox[{"MatrixForm", "[", "\[IndentingNewLine]", 
+      RowBox[{"MatrixPower", "[", 
+       RowBox[{"trans2", ",", " ", "exponent"}], "]"}], " ", "]"}], ",", " ", 
+     
+     RowBox[{"{", 
+      RowBox[{"4", ",", "3"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"exponent", ",", " ", "1", ",", " ", "500", ",", " ", "1", ",", 
+     RowBox[{"Appearance", " ", "\[Rule]", " ", "\"\<Labeled\>\""}]}], 
+    "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.658165883113721*^9, 3.65816590529727*^9}, 
+   3.658589468652835*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`exponent$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`exponent$$], 1, 500, 1}}, Typeset`size$$ = {
+    253., {37.134033203125, 42.865966796875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`exponent$130968$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`exponent$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`exponent$$, $CellContext`exponent$130968$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> NumberForm[
+        MatrixForm[
+         MatrixPower[$CellContext`trans2, $CellContext`exponent$$]], {4, 3}], 
+      "Specifications" :> {{$CellContext`exponent$$, 1, 500, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{320., {82., 87.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6655118679557047`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{307, Automatic}, {29, Automatic}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 112, 1, 64, "Section"],
+Cell[695, 25, 237, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[957, 32, 1696, 49, 176, "Input"],
+Cell[2656, 83, 1749, 35, 204, "Output"]
+}, Open  ]],
+Cell[4420, 121, 151, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[4596, 128, 449, 13, 28, "Input"],
+Cell[5048, 143, 413, 9, 28, "Output"]
+}, Open  ]],
+Cell[5476, 155, 398, 9, 49, "Text"],
+Cell[5877, 166, 909, 24, 80, "Input"],
+Cell[CellGroupData[{
+Cell[6811, 194, 430, 9, 28, "Input"],
+Cell[7244, 205, 413, 9, 28, "Output"]
+}, Open  ]],
+Cell[7672, 217, 44, 1, 4, "PageBreak",
+ PageBreakBelow->True],
+Cell[7719, 220, 271, 9, 8, "Text"],
+Cell[7993, 231, 249, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[8267, 240, 1157, 29, 157, "Input"],
+Cell[9427, 271, 1749, 35, 186, "Output"]
+}, Open  ]],
+Cell[11191, 309, 275, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[11491, 318, 2010, 53, 182, "Input"],
+Cell[13504, 373, 11015, 288, 112, "Output"]
+}, Open  ]],
+Cell[24534, 664, 44, 1, 4, "PageBreak",
+ PageBreakBelow->True],
+Cell[24581, 667, 117, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[24723, 672, 1832, 50, 165, "Input"],
+Cell[26558, 724, 10859, 288, 112, "Output"]
+}, Open  ]],
+Cell[37432, 1015, 486, 8, 68, "Text"],
+Cell[CellGroupData[{
+Cell[37943, 1027, 637, 16, 63, "Input"],
+Cell[38583, 1045, 1751, 35, 220, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

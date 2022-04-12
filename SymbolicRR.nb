@@ -1,0 +1,733 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24318,        724]
+NotebookOptionsPosition[     22526,        661]
+NotebookOutlinePosition[     23089,        683]
+CellTagsIndexPosition[     22985,        678]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+The following is a function SymbolicRR that makes row reduction more \
+compatible with symbolic algebra.
+Author: Corbett Redden (corbett.redden@liu.edu)\
+\>", "Text",
+ CellChangeTimes->{{3.6527205042696953`*^9, 3.652720543336103*^9}, {
+  3.65325226725357*^9, 3.653252276978517*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SymbolicRR", "[", 
+    RowBox[{"matrix_", ",", " ", 
+     RowBox[{"symbols_:", 
+      RowBox[{"{", "}"}]}]}], "]"}], " ", ":=", " ", 
+   RowBox[{"FixedPoint", "[", 
+    RowBox[{
+     RowBox[{"Function", "[", 
+      RowBox[{"mtrx", ",", " ", 
+       RowBox[{"Simplify", "[", 
+        RowBox[{"RowReduce", "[", 
+         RowBox[{"mtrx", ",", " ", 
+          RowBox[{"ZeroTest", " ", "\[Rule]", " ", 
+           RowBox[{"(", " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Apply", "[", 
+               RowBox[{"Or", ",", " ", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"!", 
+                   RowBox[{"FreeQ", "[", 
+                    RowBox[{"#", ",", " ", "symb"}], "]"}]}], ",", " ", 
+                  RowBox[{"{", 
+                   RowBox[{"symb", ",", " ", "symbols"}], "}"}]}], "]"}]}], 
+               "]"}], "  ", "||", " ", 
+              RowBox[{"PossibleZeroQ", "[", "#", "]"}]}], "&"}], ")"}]}]}], 
+         "]"}], "]"}]}], "]"}], ",", "matrix", ",", " ", "10"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SymbolicRR", "::", "usage"}], "=", "\"\<SymbolicRR[\!\(\*
+StyleBox[\"matrix\",
+FontSlant->\"Italic\"]\), {\!\(\*SubscriptBox[
+StyleBox[\"var\",
+FontSlant->\"Italic\"], \"1\"]\), \!\(\*SubscriptBox[
+StyleBox[\"var\",
+FontSlant->\"Italic\"], \"2\"]\), ...}] row reduces a matrix without assuming \
+expressions involving variables are non-zero.\>\""}], ";"}]}], "Input",
+ CellChangeTimes->{3.6527216052299833`*^9, 3.652722302192355*^9, 
+  3.652723502389879*^9, 3.6527264975729427`*^9}],
+
+Cell[TextData[{
+ "In ordinary RowReduce, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " will implicitly assume all expressions involving variables are invertible. \
+ While we get the \[OpenCurlyDoubleQuote]desired answer\
+\[CloseCurlyDoubleQuote] in this first case, ... "
+}], "Text",
+ CellChangeTimes->{{3.652720555703862*^9, 3.6527206110816402`*^9}, {
+  3.6527210074431267`*^9, 3.652721024957074*^9}, {3.652721211075242*^9, 
+  3.652721212075*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RowReduce", "[", 
+   RowBox[{"(", GridBox[{
+      {"1", "1", "3", "x"},
+      {"2", "0", "2", "y"},
+      {"1", "1", "5", "z"}
+     }], ")"}], "]"}], " ", "//", " ", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720723779883*^9, 3.6527207440599327`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{"x", "+", "y", "-", "z"}], ")"}]}]},
+     {"0", "1", "0", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"4", " ", "x"}], "-", "y", "-", 
+         RowBox[{"2", " ", "z"}]}], ")"}]}]},
+     {"0", "0", "1", 
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "x"}], "+", "z"}], ")"}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.652720739295539*^9, 3.6527207516211977`*^9}, 
+   3.652721631689179*^9, 3.652721707958075*^9, 3.65272349733149*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+... in this next case RowReduce assumes that x+y-z is invertible.\
+\>", "Text",
+ CellChangeTimes->{{3.6527210304656467`*^9, 3.652721053503867*^9}, {
+   3.652721090233932*^9, 3.6527211174802094`*^9}, {3.6527211961683617`*^9, 
+   3.652721217355212*^9}, 3.652721666368751*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RowReduce", "[", 
+   RowBox[{"(", GridBox[{
+      {"1", "1", "3", "x"},
+      {"2", "0", "2", "y"},
+      {"3", "1", "5", "z"}
+     }], ")"}], "]"}], " ", "//", " ", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720613967601*^9, 3.65272061673705*^9}, {
+  3.652720671588462*^9, 3.652720673418078*^9}, {3.6527207456144743`*^9, 
+  3.652720748156122*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "1", "0"},
+     {"0", "1", "2", "0"},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.652720772622548*^9, 3.652721631709219*^9, 
+  3.652721707980378*^9, 3.652723497372703*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+To correct this, SymbolicRR gives the type of answer one would arrive at when \
+doing row reduction by hand.\
+\>", "Text",
+ CellChangeTimes->{{3.6527211278167467`*^9, 3.652721167992444*^9}, {
+   3.652721224818789*^9, 3.652721233498727*^9}, 3.652721669960977*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {"1", "1", "3", "x"},
+       {"2", "0", "2", "y"},
+       {"3", "1", "5", "z"}
+      }], ")"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "y", ",", "z"}], "}"}]}], "]"}], " ", "//", " ", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720875642535*^9, 3.6527208777605047`*^9}, 
+   3.652721187470046*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "1", 
+      FractionBox["y", "2"]},
+     {"0", "1", "2", 
+      RowBox[{"x", "-", 
+       FractionBox["y", "2"]}]},
+     {"0", "0", "0", 
+      RowBox[{
+       RowBox[{"-", "4"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"x", "+", "y", "-", "z"}], ")"}]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.652721085177565*^9, 3.6527211885471973`*^9, 
+  3.652721631742041*^9, 3.6527217080118837`*^9, 3.652723497405921*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+Note the importance of including the correct variables.\
+\>", "Text",
+ CellChangeTimes->{{3.652721291400889*^9, 3.652721317960451*^9}, 
+   3.652721682296392*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {"1", "1", "3", "x"},
+       {"2", "0", "2", "y"},
+       {"3", "1", "5", "z"}
+      }], ")"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", " ", "b", ",", "c"}], "}"}]}], "]"}], " ", "//", " ", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720762502699*^9, 3.652720819131942*^9}, 
+   3.652720870704131*^9, 3.6527212852857533`*^9, {3.652721325136423*^9, 
+   3.652721327280828*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "1", "0"},
+     {"0", "1", "2", "0"},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.65272132784612*^9, 3.652721631774129*^9, 
+  3.652721708036187*^9, 3.652723497437969*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+The variables are optional, so SymbolicRR can be used in place of RowReduce.\
+\>", "Text",
+ CellChangeTimes->{{3.652721254602908*^9, 3.6527212730415983`*^9}, 
+   3.6527216876564293`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{"(", GridBox[{
+      {"3", "5", "1"},
+      {
+       RowBox[{"-", "2"}], "3", "8"},
+      {"3", "1", "9"}
+     }], ")"}], "]"}], " ", "//", " ", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720894802642*^9, 3.652720937646985*^9}, {
+  3.6527214415230303`*^9, 3.6527214438420267`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0"},
+     {"0", "1", "0"},
+     {"0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.652721631809671*^9, 3.652721708079492*^9, 
+  3.6527234974716*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+SymbolicRR will attempt to make simplifications such as sin^2(x) + cos^2(x) = \
+1 and continue with row reduction.\
+\>", "Text",
+ CellChangeTimes->{{3.652721352275195*^9, 3.652721412473524*^9}, 
+   3.6527216911287937`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", " ", "1", ",", " ", "2", ",", " ", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], "^", "2"}]}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1", ",", "2", ",", " ", 
+        RowBox[{"-", 
+         RowBox[{
+          RowBox[{"Cos", "[", "x", "]"}], "^", "2"}]}]}], " ", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"7", ",", "8", ",", "9", ",", "z"}], "}"}]}], "}"}], ",", " ", 
+    
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "y", ",", " ", "z"}], "}"}]}], "]"}], " ", "//", 
+  " ", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.652720842872038*^9, 3.652720850782546*^9}, {
+  3.6527214255150337`*^9, 3.652721458098151*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "7", "0"},
+     {"0", "1", 
+      RowBox[{"-", "5"}], "0"},
+     {"0", "0", "0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6527214174605837`*^9, 3.6527214586608753`*^9}, 
+   3.6527216318392277`*^9, 3.6527217081128473`*^9, 3.652723497504825*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "\nThis process of simplifying and continuing with row reduction will only \
+occur 10 times, though that can be easily changed.  This is to prevent ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " from entering an infinite loop when an incorrect matrix is inserted."
+}], "Text",
+ CellChangeTimes->{{3.652721482981715*^9, 3.6527215698825893`*^9}, 
+   3.6527216944486837`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", " ", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "6"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{"a", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "y", ",", "z"}], "}"}]}], "]"}], " ", "//", " ", 
+  "MatrixForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SymbolicRR", "[", 
+   RowBox[{"A", ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "y", ",", "z"}], "}"}]}], "]"}], " ", "//", " ", 
+  "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.652720955804558*^9, 3.652720984784841*^9}, {
+  3.6527215813701077`*^9, 3.652721597266333*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0"},
+     {"0", "1"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.652721631861755*^9, 3.6527217081645937`*^9, 
+  3.652723497538135*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"RowReduce", "[", 
+   RowBox[{
+    RowBox[{"RowReduce", "[", 
+     RowBox[{
+      RowBox[{"RowReduce", "[", 
+       RowBox[{
+        RowBox[{"RowReduce", "[", 
+         RowBox[{
+          RowBox[{"RowReduce", "[", 
+           RowBox[{
+            RowBox[{"RowReduce", "[", 
+             RowBox[{
+              RowBox[{"RowReduce", "[", 
+               RowBox[{
+                RowBox[{"RowReduce", "[", 
+                 RowBox[{
+                  RowBox[{"RowReduce", "[", 
+                   RowBox[{
+                    RowBox[{"RowReduce", "[", 
+                    RowBox[{"A", ",", 
+                    RowBox[{"ZeroTest", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                    "]"}]}], "||", 
+                    RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], 
+                    ")"}]}]}], "]"}], ",", 
+                    RowBox[{"ZeroTest", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                    "]"}]}], "||", 
+                    RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], 
+                    ")"}]}]}], "]"}], ",", 
+                  RowBox[{"ZeroTest", "\[Rule]", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                    "]"}]}], "||", 
+                    RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], 
+                    ")"}]}]}], "]"}], ",", 
+                RowBox[{"ZeroTest", "\[Rule]", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Or", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                    "]"}]}], "||", 
+                    RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], 
+                  ")"}]}]}], "]"}], ",", 
+              RowBox[{"ZeroTest", "\[Rule]", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Or", "@@", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                    "]"}]}], "||", 
+                  RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], 
+                ")"}]}]}], "]"}], ",", 
+            RowBox[{"ZeroTest", "\[Rule]", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Or", "@@", 
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"!", 
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"symb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                  "]"}]}], "||", 
+                RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], ")"}]}]}],
+            "]"}], ",", 
+          RowBox[{"ZeroTest", "\[Rule]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Or", "@@", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"!", 
+                  RowBox[{"FreeQ", "[", 
+                   RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"symb", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+                "]"}]}], "||", 
+              RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], ")"}]}]}], 
+         "]"}], ",", 
+        RowBox[{"ZeroTest", "\[Rule]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Or", "@@", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"!", 
+                RowBox[{"FreeQ", "[", 
+                 RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"symb", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], 
+              "]"}]}], "||", 
+            RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], ")"}]}]}], 
+       "]"}], ",", 
+      RowBox[{"ZeroTest", "\[Rule]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Or", "@@", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"!", 
+              RowBox[{"FreeQ", "[", 
+               RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"symb", ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], "]"}]}], 
+          "||", 
+          RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], ")"}]}]}], 
+     "]"}], ",", 
+    RowBox[{"ZeroTest", "\[Rule]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Or", "@@", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"!", 
+            RowBox[{"FreeQ", "[", 
+             RowBox[{"#1", ",", "symb"}], "]"}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"symb", ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "}"}]}], "]"}]}], "||", 
+        RowBox[{"PossibleZeroQ", "[", "#1", "]"}]}], "&"}], ")"}]}]}], "]"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.652721631861755*^9, 3.6527217081645937`*^9, 
+  3.652723497548839*^9}]
+}, Open  ]],
+
+Cell["\<\
+
+Documentation can be viewed using...\
+\>", "Text",
+ CellChangeTimes->{{3.652721613082732*^9, 3.6527216203375883`*^9}, 
+   3.652721699040495*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "SymbolicRR"}]], "Input",
+ CellChangeTimes->{{3.652721622181232*^9, 3.6527216256096573`*^9}}],
+
+Cell[BoxData[
+ StyleBox["\<\"SymbolicRR[\!\(\*\\nStyleBox[\\\"matrix\\\",\\nFontSlant->\\\"\
+Italic\\\"]\), {\!\(\*SubscriptBox[\\n \
+StyleBox[\\\"var\\\",\\nFontSlant->\\\"Italic\\\"], \\\"1\\\"]\), \
+\!\(\*SubscriptBox[\\n StyleBox[\\\"var\\\",\\nFontSlant->\\\"Italic\\\"], \\\
+\"2\\\"]\), ...}] row reduces a matrix without assuming expressions involving \
+variables are non-zero.\"\>", "MSG"]], "Print", "PrintUsage",
+ CellChangeTimes->{3.652723497640794*^9},
+ CellTags->"Info-02ec8d09-73e4-404a-b466-cb8e22a690f5"]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{Automatic, 26}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info-02ec8d09-73e4-404a-b466-cb8e22a690f5"->{
+  Cell[21990, 650, 520, 8, 43, "Print",
+   CellTags->"Info-02ec8d09-73e4-404a-b466-cb8e22a690f5"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info-02ec8d09-73e4-404a-b466-cb8e22a690f5", 22862, 672}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 292, 6, 49, "Text"],
+Cell[853, 28, 1675, 42, 199, "Input"],
+Cell[2531, 72, 457, 10, 49, "Text"],
+Cell[CellGroupData[{
+Cell[3013, 86, 294, 8, 63, "Input"],
+Cell[3310, 96, 1204, 35, 87, "Output"]
+}, Open  ]],
+Cell[4529, 134, 284, 6, 49, "Text"],
+Cell[CellGroupData[{
+Cell[4838, 144, 391, 10, 63, "Input"],
+Cell[5232, 156, 743, 20, 63, "Output"]
+}, Open  ]],
+Cell[5990, 179, 273, 6, 49, "Text"],
+Cell[CellGroupData[{
+Cell[6288, 189, 424, 13, 63, "Input"],
+Cell[6715, 204, 964, 27, 79, "Output"]
+}, Open  ]],
+Cell[7694, 234, 172, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[7891, 243, 496, 14, 63, "Input"],
+Cell[8390, 259, 742, 20, 63, "Output"]
+}, Open  ]],
+Cell[9147, 282, 197, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[9369, 291, 354, 10, 63, "Input"],
+Cell[9726, 303, 704, 20, 63, "Output"]
+}, Open  ]],
+Cell[10445, 326, 233, 6, 49, "Text"],
+Cell[CellGroupData[{
+Cell[10703, 336, 805, 22, 46, "Input"],
+Cell[11511, 360, 798, 21, 63, "Output"]
+}, Open  ]],
+Cell[12324, 384, 397, 8, 68, "Text"],
+Cell[CellGroupData[{
+Cell[12746, 396, 766, 22, 63, "Input"],
+Cell[13515, 420, 676, 19, 47, "Output"],
+Cell[14194, 441, 7477, 193, 250, "Output"]
+}, Open  ]],
+Cell[21686, 637, 155, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[21866, 646, 121, 2, 28, "Input"],
+Cell[21990, 650, 520, 8, 43, "Print",
+ CellTags->"Info-02ec8d09-73e4-404a-b466-cb8e22a690f5"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
